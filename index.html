@@ -5,13 +5,23 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Consistent Navbar</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Intel One Mono', monospace;
+        }
+
         nav {
             display: flex;
             align-items: center;
             background-color: rgba(133, 183, 205, 0.477);
-            font-family: 'Intel One Mono', monospace;
+            overflow-x: auto; /* Allow horizontal scroll on small screens */
         }
 
         nav ul {
@@ -19,15 +29,18 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
             list-style: none;
             cursor: pointer;
             padding: 0;
             margin: 0;
+            width: 100%;
+            min-width: 500px; /* Prevent items from squishing too much on narrow screens */
         }
 
         nav ul li {
             padding: 1rem;
+            flex: 1;
+            text-align: center;
         }
     </style>
 </head>
